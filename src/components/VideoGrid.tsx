@@ -12,9 +12,12 @@ const VideoGrid = () => {
   return (
     <Center p={3}>
       <Box bg="purple.700" p={3} borderRadius="10px">
-        <Grid gap={1} templateColumns="repeat(2, auto)">
+        <Grid gap={2} templateColumns="repeat(2, auto)">
           {vids.map((item) => (
-            <iframe
+            <Box
+              as="iframe"
+              height="360px"
+              width="640px"
               key={item}
               title="vimeo-player"
               frameBorder="0"

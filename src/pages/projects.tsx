@@ -9,7 +9,7 @@ const Projects: NextPage = () => {
     <Box textAlign="center">
       <Bar />
       <Text fontSize="6xl" fontWeight="bold">
-        Videos
+        Projects
       </Text>
       <VideoGrid />
     </Box>

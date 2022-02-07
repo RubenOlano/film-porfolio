@@ -1,4 +1,4 @@
-import { Box, Grid, Image, Center } from "@chakra-ui/react";
+import { Box, Grid, Image, Center, GridItem } from "@chakra-ui/react";
 import React, { FC } from "react";
 
 const images: string[] = [
@@ -25,7 +25,9 @@ const PhotoGrid: FC = () => {
       <Box bg="purple.700" p={3} width="90vw" borderRadius="10px">
         <Grid gap={2} templateColumns="repeat(5, auto)">
           {images.map((item) => (
-            <Image src={item} key={item} alt={item} fit="cover" _hover={{}} />
+            <GridItem key={item}>
+              <Image src={item} alt={item} fit="cover" />
+            </GridItem>
           ))}
         </Grid>
       </Box>
