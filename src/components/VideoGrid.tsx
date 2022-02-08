@@ -16,6 +16,7 @@ const VideoGrid = () => {
         <Grid className={styles.grid}>
           {vids.map((item) => (
             <Box
+              loading="lazy"
               className={styles.vid}
               as="iframe"
               key={item.split("/")[4]}

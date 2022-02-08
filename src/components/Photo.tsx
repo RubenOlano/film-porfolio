@@ -9,7 +9,7 @@ interface PhotoProps {
 const Photo: FC<PhotoProps> = ({ imgURL }) => {
   return (
     <Container className={styles.container}>
-      <Image className={styles.image} src={imgURL} alt="photo" />
+      <Image loading="lazy" className={styles.image} src={imgURL} alt="photo" />
       <Container className={styles.middle}>
         <Text className={styles.text} padding="16px 32px">
           Hi
