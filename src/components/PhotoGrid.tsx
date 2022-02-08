@@ -26,7 +26,7 @@ const PhotoGrid: FC = () => {
       <Box bg="purple.700" p={3} width="90vw" borderRadius="10px">
         <Grid gap={2} templateColumns="repeat(5, auto)">
           {images.map((item) => (
-            <GridItem key={item}>
+            <GridItem key={item.split("/")[3]}>
               <Photo imgURL={item} />
             </GridItem>
           ))}

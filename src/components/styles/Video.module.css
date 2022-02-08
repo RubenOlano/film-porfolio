@@ -1,0 +1,16 @@
+.vid {
+  height: 360px;
+  width: 640px;
+}
+
+.box {
+  padding: 3;
+  background-color: var(--chakra-colors-purple-700);
+  border-radius: 10px;
+}
+
+.grid {
+  grid-template-columns: repeat(2, auto);
+  gap: 1em;
+  padding: 0.5em;
+}

@@ -1,5 +1,6 @@
 import { Grid, Center, Box } from "@chakra-ui/react";
 import React from "react";
+import styles from "./styles/Video.module.css";
 
 const vids: string[] = [
   "https://player.vimeo.com/video/390738442?h=2d55eb9091",
@@ -11,14 +12,13 @@ const vids: string[] = [
 const VideoGrid = () => {
   return (
     <Center p={3}>
-      <Box bg="purple.700" p={3} borderRadius="10px">
-        <Grid gap={2} templateColumns="repeat(2, auto)">
+      <Box className={styles.box}>
+        <Grid className={styles.grid}>
           {vids.map((item) => (
             <Box
+              className={styles.vid}
               as="iframe"
-              height="360px"
-              width="640px"
-              key={item}
+              key={item.split("/")[3]}
               title="vimeo-player"
               frameBorder="0"
               allowFullScreen

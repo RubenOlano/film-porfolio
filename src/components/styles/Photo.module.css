@@ -17,6 +17,7 @@
   transition: 0.5 ease;
   position: absolute;
   text-align: center;
+  user-select: none;
 }
 
 .text {
