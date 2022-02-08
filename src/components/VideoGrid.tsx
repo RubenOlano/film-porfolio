@@ -18,7 +18,7 @@ const VideoGrid = () => {
             <Box
               className={styles.vid}
               as="iframe"
-              key={item.split("/")[3]}
+              key={item.split("/")[4]}
               title="vimeo-player"
               frameBorder="0"
               allowFullScreen
