@@ -1,7 +1,6 @@
-import { Flex, Center } from "@chakra-ui/react";
+import { Flex, Center, Grid } from "@chakra-ui/react";
 import React, { FC } from "react";
 import Photo from "./Photo";
-import styles from "./styles/PhotoGrid.module.css";
 
 const images: string[] = [
   "https://i.imgur.com/UQBT4l9.jpg",
@@ -24,35 +23,16 @@ const images: string[] = [
 const PhotoGrid: FC = () => {
   return (
     <Center p={2}>
-      <Flex bg="purple.700" borderRadius="10px">
-        <div className={styles.row}>
-          <div className={styles.column}>
-            {images.slice(0, 2).map((item) => (
-              <Photo key={item.split("/")[3]} imgURL={item} />
-            ))}
-          </div>
-          <div className={styles.column}>
-            {images.slice(3, 5).map((item) => (
-              <Photo key={item.split("/")[3]} imgURL={item} />
-            ))}
-          </div>
-          <div className={styles.column}>
-            {images.slice(6, 7).map((item) => (
-              <Photo key={item.split("/")[3]} imgURL={item} />
-            ))}
-          </div>
-          <div className={styles.column}>
-            {images.slice(7, 11).map((item) => (
-              <Photo key={item.split("/")[3]} imgURL={item} />
-            ))}
-          </div>
-          <div className={styles.column}>
-            {images.slice(11, 15).map((item) => (
-              <Photo key={item.split("/")[3]} imgURL={item} />
-            ))}
-          </div>
-        </div>
-      </Flex>
+      <Grid
+        gap={2}
+        bg="purple.700"
+        borderRadius="10px"
+        templateColumns="repeat(3, auto)"
+      >
+        {images.map((item) => (
+          <Photo key={item.split("/")[3]} imgURL={item} />
+        ))}
+      </Grid>
     </Center>
   );
 };
