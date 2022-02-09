@@ -12,9 +12,8 @@ const Bar: FC = () => {
         </Text>
         <Spacer />
         <Stack my={6} direction="row" spacing={6}>
+          <Link href="/">Images</Link>
           <Link href="/projects">Projects</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
         </Stack>
       </Flex>
     </Box>
